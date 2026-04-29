@@ -1,10 +1,10 @@
-AIM:                                      
+#AIM:                                      
 To write a program to predict the profit of a city using the linear regression model with gradient descent.                                      
 
-Equipments Required:                                      
+#Equipments Required:                                      
 Hardware – PCs                                      
 Anaconda – Python 3.7 Installation / Jupyter notebook                                      
-Algorithm                                      
+#Algorithm                                      
 1.Load the dataset from a CSV file and separate the features and target variable, encoding any categorical variables as needed.                                      
 
 2.Scale the features using a standard scaler to normalize the data.                                      
@@ -15,7 +15,7 @@ Algorithm
 
 5.Make predictions on new data by transforming it using the same scaling and encoding applied to the training data.                                      
 
-Program:                                      
+#Program:                                      
 /*
 Program to implement the linear regression using gradient descent.                                      
 Developed by:BHARATH V                                      
@@ -32,13 +32,13 @@ def linear_regression(X, y, iters=1000, learning_rate=0.01):
     X = np.hstack((np.ones((X.shape[0], 1)), X))  # Add intercept term                                                                            
     theta = np.zeros((X.shape[1], 1))                                      
     
-    for _ in range(iters):                                      
+for _ in range(iters):                                      
         predictions = X.dot(theta)                                      
         errors = predictions - y.reshape(-1, 1)                                      
         gradient = (1 / X.shape[0]) * X.T.dot(errors)                                      
         theta -= learning_rate * gradient                                      
     
-    return theta                                      
+return theta                                      
 
 data = pd.read_csv('50_Startups.csv', header=0)                                      
 
