@@ -65,3 +65,8 @@ new_prediction = np.dot(np.append(1, new_data_scaled), theta)
 
 print(f"Predicted value: {new_prediction[0]}")
 data.head()
+Output:
+<img width="584" height="254" alt="image" src="https://github.com/user-attachments/assets/721a0431-3150-44a2-82d1-c00c673f2769" />
+result:
+Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
+
